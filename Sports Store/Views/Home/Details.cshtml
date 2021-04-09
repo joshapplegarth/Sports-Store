@@ -1,0 +1,16 @@
+﻿@model Product
+
+<h3> @Model.Name </h3>
+<p> @Model.Description </p>
+<h4> @Model.Price.ToString("c") </h4>
+<h4> Category: @Model.Category </h4>
+
+
+<a asp-action="Update" asp-route-id="@Model.ProductId">
+    <input type="submit" value="Update" />
+</a>
+
+<a asp-action="Index">
+    <input type="submit" value="Back" />
+</a>
+

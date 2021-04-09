@@ -1,0 +1,13 @@
+﻿@model IQueryable<Product>
+
+<h4> Welcome to the Sports Store </h4>
+<a asp-action="Add" ><input type="submit" value="Add Product"/></a>
+<hr />
+
+@foreach (Product p in Model)
+{
+    <h3><a asp-action="Details" asp-route-productId="@p.ProductId"> @p.Name </a></h3>
+    @p.Description
+    <h4> @p.Price.ToString("c")</h4>
+    <hr />
+}
